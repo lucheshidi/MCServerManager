@@ -33,7 +33,17 @@ def get_system_type():
 def main():
     type = get_system_type()
     Termux_print = f"""========================================
-    Welcome to 
+    Welcome to Minecraft Server Manager for Termux!
+    In Termux Version. You can't install or remove Minecraft Server.
+    You must install a rootfs container to run with Linux and you can install or remove Minecraft Server
+    Please input what you want to do:
+    {YELLOW}---------------------------------
+    {GREEN}0. {NONE}Update Script.
+    {YELLOW}---------------------------------
+    {GREEN}1. {NONE}Install rootfs container.
+    {GREEN}2. {NONE}Remove rootfs container.
+    {YELLOW}---------------------------------
+    {GREEN}4. {NONE}Exit script.
 """
     Linux_print = f""""""
     if type == "isLinux":
