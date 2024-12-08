@@ -44,6 +44,9 @@ def main():
     {GREEN}2. {NONE}Remove rootfs container.
     {YELLOW}---------------------------------
     {GREEN}4. {NONE}Exit script.
+    {YELLOW}=================================
+    Please input: 
+    > 
 """
     Linux_print = f"""========================================
     Welcome to Minecraft Server Manager for Linux!
@@ -59,7 +62,9 @@ def main():
     {YELLOW}---------------------------------
     {GREEN}5. {NONE}About Script.
     {GREEN}6. {NONE}Exit Script.
-
+    {YELLOW}=================================
+    Please input: 
+    > 
 """
     if type == "isLinux":
         print(f"{GREEN}[ {NONE}INFO{GREEN} ]{NONE} Successfully load Linux program!")
