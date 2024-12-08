@@ -4,12 +4,12 @@ import time
 import subprocess
 
 # 定义颜色变量
-RED='\E[1;31m'     # 红
-GREEN='\E[1;32m'    # 绿
-YELLOW='\E[1;33m'    # 黄
-BLUE='\E[1;34m'     # 蓝
-PINK='\E[1;35m'     # 粉红
-NONE='\E[0m'         # 清除颜色
+RED = '\E[1;31m'       # 红
+GREEN = '\E[1;32m'     # 绿
+YELLOW = '\E[1;33m'    # 黄
+BLUE = '\E[1;34m'      # 蓝
+PINK = '\E[1;35m'      # 粉红
+NONE = '\E[0m'         # 清除颜色
 
 # 设置运行Linux命令
 def exec(com: str):
@@ -36,7 +36,7 @@ def main():
     Welcome to Minecraft Server Manager for Termux!
     In Termux Version. You can't install or remove Minecraft Server.
     You must install a rootfs container to run with Linux and you can install or remove Minecraft Server
-    Please input what you want to do:
+    Please input what do you want to do:
     {YELLOW}---------------------------------
     {GREEN}0. {NONE}Update Script.
     {YELLOW}---------------------------------
@@ -45,11 +45,29 @@ def main():
     {YELLOW}---------------------------------
     {GREEN}4. {NONE}Exit script.
 """
-    Linux_print = f""""""
+    Linux_print = f"""========================================
+    Welcome to Minecraft Server Manager for Linux!
+    Please input what do you want to do:
+    {YELLOW}---------------------------------
+    {GREEN}0. {NONE}Update Script.
+    {YELLOW}---------------------------------
+    {GREEN}1. {NONE}Install Minecraft Server.
+    {GREEN}2. {NONE}Remove Minecraft Server.
+    {GREEN}3. {NONE}Edit Minecraft Server.
+    {YELLOW}---------------------------------
+    {GREEN}4. {NONE}Change install mirror.
+    {YELLOW}---------------------------------
+    {GREEN}5. {NONE}About Script.
+    {GREEN}6. {NONE}Exit Script.
+
+"""
     if type == "isLinux":
         print(f"{GREEN}[ {NONE}INFO{GREEN} ]{NONE} Successfully load Linux program!")
+        command = input(Linux_print)
     elif type == "isTermux":
         print(f"{GREEN}[ {NONE}INFO{GREEN} ]{NONE} Successfully load Android program!")
+        command = input(Termux_print)
+        pass
     else:
         return
 
